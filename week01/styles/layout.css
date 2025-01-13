@@ -1,55 +1,83 @@
+/* Reset básico */
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-	font-family: acme, Arial, sans-serif;
-}
-
-h1 {
-	text-align: center;
-	background-color: rgb(0 110 182 / 1);
-	padding: 0.5rem;
+	font-family: Arial, sans-serif;
 	color: #fff;
+	background-color: #333;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+	min-height: 100vh;
 }
 
-p {
-	text-align: center;
+header {
+	grid-area: header;
+	background-color: #444;
+	padding: 0;
+}
+
+.header-content {
+	font-size: 1.5rem;
+	padding: 10px;
+	margin: 0;
+	text-align: left;
+	height: 100px;
 }
 
 nav {
-	margin: 0 auto 2rem;
-	max-width: 90vw;
+	background-color: #000;
 }
 
-main {
-	margin: 1rem;
-	border: 1px solid rgb(0 0 0 / .2);
-	padding: 1rem;
-	background-color: #eee;
-}
-
-.navigation {
+.nav-menu {
 	list-style: none;
 	display: flex;
-	flex-wrap: wrap;
-	background-color: #333;
-	align-items: center;
+	padding: 0;
+	margin: 0;
 }
-.navigation li {
-	flex: 1 1 auto; /* What is the difference between auto and 100% flex-basis? - turn on link borders to view */
-}
-.navigation a {
-	display: block;
-	color: #eee;
-	padding: 0.75rem;
-	text-decoration: none;
+
+.nav-menu li {
+	flex: 1;
 	text-align: center;
 }
 
-.navigation a:hover {
-	font-weight: 700;
-	text-decoration: underline;
-	text-decoration-color: yellow;
+.nav-menu li a {
+	display: block;
+	padding: 20px 0;
+	color: #fff;
+	text-decoration: none;
+	font-size: 1rem;
+}
+
+main {
+	grid-area: main;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 0;
+}
+
+.main-content {
+	background-color: #999;
+	padding: 20px;
+}
+
+.aside-content {
+	background-color: #fff;
+	color: #000;
+	padding: 20px;
+}
+
+footer {
+	grid-area: footer;
+	text-align: center;
+	padding: 10px 20px;
+	background-color: #444;
+	height: 300px;
 }
