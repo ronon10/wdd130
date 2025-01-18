@@ -1,0 +1,12 @@
+/* Ajustes para telas maiores */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta dinamicamente o número de colunas */
+    gap: 1rem; /* Espaço entre as imagens */
+  }
+  
+  main {
+    max-width: 1200px; /* Limita a largura máxima do conteúdo principal */
+    margin: 0 auto; /* Centraliza o conteúdo */
+  }
+  
