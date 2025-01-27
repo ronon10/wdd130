@@ -1,0 +1,70 @@
+/* Estilo padrão (mobile-first) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #004D40;
+    color: #FFF;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos gerais para as seções */
+.data, .weather {
+    border: 2px solid #00796B;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px auto;
+    background-color: #E0F2F1;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Layout desktop */
+.desktop-layout .data, .desktop-layout .weather {
+    max-width: 800px;
+}
+
+.desktop-layout #main-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: start;
+    justify-content: center;
+}
+
+.desktop-layout .hero {
+    grid-column: span 2;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #004D40;
+    color: #FFF;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
