@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templos</title>
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="filterTemples('all')">Início</a></li>
+                <li><a href="#" onclick="filterTemples('old')">Antigo</a></li>
+                <li><a href="#" onclick="filterTemples('new')">Novo</a></li>
+                <li><a href="#" onclick="filterTemples('large')">Grande</a></li>
+                <li><a href="#" onclick="filterTemples('small')">Pequeno</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="temples-container">
+            <!-- Cartões de templo serão gerados dinamicamente aqui -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025, Última modificação: <span id="last-modified"></span></p>
+    </footer>
+
+    <script src="scripts/filtered-temples.js"></script>
+</body>
+
+</html>
