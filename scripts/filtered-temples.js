@@ -54,7 +54,7 @@ const temples = [
 
 function displayTemples(templeArray) {
     const templesContainer = document.getElementById('temples-container');
-    templesContainer.innerHTML = ''; 
+    templesContainer.innerHTML = '';
 
     templeArray.forEach(temple => {
         const card = document.createElement('div');
@@ -102,7 +102,7 @@ function filterTemples(criteria) {
 document.addEventListener('DOMContentLoaded', () => {
     displayTemples(temples);
 
-    
+
     const lastModified = document.getElementById('last-modified');
     lastModified.textContent = document.lastModified;
 });
