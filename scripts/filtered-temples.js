@@ -48,13 +48,11 @@ const temples = [
       area: 116642,
       imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
-  // Adicione mais templos aqui...
 ];
 
-// Função para criar e exibir os cartões de templo
 function displayTemples(templeArray) {
   const templesContainer = document.getElementById('temples-container');
-  templesContainer.innerHTML = ''; // Limpar os templos existentes
+  templesContainer.innerHTML = '';
 
   templeArray.forEach(temple => {
       const card = document.createElement('div');
@@ -74,7 +72,7 @@ function displayTemples(templeArray) {
   });
 }
 
-// Função de filtragem
+
 function filterTemples(criteria) {
   let filteredTemples;
 
@@ -98,11 +96,11 @@ function filterTemples(criteria) {
   displayTemples(filteredTemples);
 }
 
-// Exibir todos os templos ao carregar a página
+a
 document.addEventListener('DOMContentLoaded', () => {
   displayTemples(temples);
 
-  // Mostrar a data da última modificação
+  
   const lastModified = document.getElementById('last-modified');
   lastModified.textContent = document.lastModified;
 });
